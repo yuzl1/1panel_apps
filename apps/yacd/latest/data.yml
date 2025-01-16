@@ -1,0 +1,17 @@
+additionalProperties:
+  formFields:
+    - default: 1234
+      edit: true
+      envKey: PANEL_APP_PORT_HTTP
+      labelEn: Port1
+      labelZh: http端口
+      required: true
+      rule: paramPort
+      type: number
+    - default: Asia/Shanghai
+      edit: true
+      envKey: TIME_ZONE
+      labelEn: Time zone
+      labelZh: 时区
+      required: true
+      type: text

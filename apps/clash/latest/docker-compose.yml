@@ -1,0 +1,20 @@
+services:
+  clash:
+    image: dreamacro/clash:latest
+    container_name: ${CONTAINER_NAME}  // 固定写法，勿改
+    restart: always
+    networks:
+      - 1panel-network
+    volumes:
+      - ./data:/root/.config/clash
+    ports:
+      - ${PANEL_APP_PORT_1}:7890
+      - ${PANEL_APP_PORT_2}:9090
+    environment:
+      - TZ=${TIME_ZONE}
+    labels:
+      createdBy: "Apps"
+
+networks:
+  1panel-network:
+    external: true
