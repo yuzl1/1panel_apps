@@ -11,9 +11,9 @@ services:
       - ${PANEL_APP_PORT}:8000
     environment:
       - TZ=${TIME_ZONE}
-      - RUNNING_IN_DOCKER='true'
-      - dataSourceName='${PANEL_DB_USER}:${PANEL_DB_USER_PASSWORD}@tcp(${PANEL_DB_HOST}:${PANEL_DB_PORT})/'
-      - dbName='${PANEL_DB_NAME}'
+      - RUNNING_IN_DOCKER=true
+      - dataSourceName=${PANEL_DB_USER}:${PANEL_DB_USER_PASSWORD}@tcp(${PANEL_DB_HOST}:${PANEL_DB_PORT})/
+      - dbName=${PANEL_DB_NAME}
     labels:
       createdBy: "Apps"
 
