@@ -1,7 +1,7 @@
 services:
   clash:
     image: dreamacro/clash:latest
-    container_name: ${CONTAINER_NAME}  // 固定写法，勿改
+    container_name: ${CONTAINER_NAME}
     restart: always
     networks:
       - 1panel-network
