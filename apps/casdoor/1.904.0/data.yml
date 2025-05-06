@@ -36,7 +36,7 @@ additionalProperties:
       type: password  #密码字段使用此 type
     - default: 8000
       edit: true
-      envKey: PANEL_APP_PORT
+      envKey: PANEL_APP_PORT_HTTP
       labelEn: Port
       labelZh: Web端口
       required: true
