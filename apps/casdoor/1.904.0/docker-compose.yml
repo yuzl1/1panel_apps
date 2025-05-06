@@ -1,0 +1,22 @@
+services:
+  casdoor:
+    image: casbin/casdoor:v1.904.0
+    container_name: ${CONTAINER_NAME}  // 固定写法，勿改
+    restart: always
+    networks:
+      - 1panel-network
+    volumes:
+      - ./data/conf:/conf/
+    ports:
+      - ${PANEL_APP_PORT}:8000
+    environment:
+      - TZ=${TIME_ZONE}
+      - RUNNING_IN_DOCKER="true"
+      - dataSourceName='${PANEL_DB_USER}:${PANEL_DB_USER_PASSWORD}@tcp(${PANEL_DB_HOST}:${PANEL_DB_PORT})/'
+      - dbName='${PANEL_DB_NAME}'
+    labels:
+      createdBy: "Apps"
+
+networks:
+  1panel-network:
+    external: true

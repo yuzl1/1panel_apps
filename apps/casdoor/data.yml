@@ -1,0 +1,14 @@
+additionalProperties:  #固定参数
+  key: casdoor   #应用的 key ，仅限英文，用于在 Linux 创建文件夹
+  name: Casdoor  #应用名称
+  tags:
+    - Local
+    - Tool
+  shortDescZh: Casdoor 可为网页和应用程序用户的登录请求提供服务。 #应用中文描述，不要超过30个字
+  shortDescEn: Casdoor can provide services for the login requests of web page and application users. #应用英文描述
+  type: tool  #应用类型，区别于应用分类，只能有一个，请参照下方的类型列表
+  crossVersionUpdate: true  #是否可以跨大版本升级
+  limit: 0  #应用安装数量限制，0 代表无限制
+  website: https://casdoor.org/zh/   #官网地址
+  github:  https://github.com/casdoor/casdoor #github 地址
+  document: https://casdoor.org/zh/docs/overview #文档地址
