@@ -5,6 +5,14 @@ additionalProperties:
       label:
         zh: 数据库管理员用户名
         en: DB Admin User
+        es-es: DB Admin User
+        ja: DB Admin User
+        ms: DB Admin User
+        pt-br: DB Admin User
+        ru: DB Admin User
+        ko: DB Admin User
+        zh-Hant: 資料庫管理員使用者名稱
+        tr: DB Admin User
       required: true
       rule: paramCommon
       type: text
@@ -13,6 +21,14 @@ additionalProperties:
       label:
         zh: 数据库管理员密码
         en: DB Admin Password
+        es-es: DB Admin Password
+        ja: DB Admin Password
+        ms: DB Admin Password
+        pt-br: DB Admin Password
+        ru: DB Admin Password
+        ko: DB Admin Password
+        zh-Hant: 資料庫管理員密碼
+        tr: DB Admin Password
       required: true
       rule: paramComplexity
       type: password
@@ -22,6 +38,14 @@ additionalProperties:
       label:
         zh: 服务端口
         en: Port
+        es-es: Port
+        ja: Port
+        ms: Port
+        pt-br: Port
+        ru: Port
+        ko: Port
+        zh-Hant: 服務連接埠
+        tr: Port
       required: true
       rule: paramPort
       type: number

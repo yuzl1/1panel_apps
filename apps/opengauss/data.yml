@@ -6,6 +6,14 @@ additionalProperties:
   description:
     zh: openGauss 是一款开源关系型数据库管理系统。
     en: openGauss is an open source relational database management system.
+    es-es: openGauss is an open source relational database management system.
+    ja: openGauss is an open source relational database management system.
+    ms: openGauss is an open source relational database management system.
+    pt-br: openGauss is an open source relational database management system.
+    ru: openGauss is an open source relational database management system.
+    ko: openGauss is an open source relational database management system.
+    zh-Hant: openGauss 是一款開源關聯式資料庫管理系統。
+    tr: openGauss is an open source relational database management system.
   type: runtime
   crossVersionUpdate: true
   limit: 0

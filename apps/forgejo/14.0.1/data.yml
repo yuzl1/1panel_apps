@@ -8,11 +8,13 @@ additionalProperties:
         zh: HTTP 端口
         zh-Hant: HTTP 埠
         en: HTTP Port
+        es-es: HTTP Port
         ja: HTTP ポート
         ko: HTTP 포트
         ms: HTTP Port
         pt-br: HTTP Porta
         ru: HTTP Порт
+        tr: HTTP Port
       required: true
       type: number
       edit: true
@@ -25,11 +27,13 @@ additionalProperties:
         zh: SSH 端口
         zh-Hant: SSH 埠
         en: SSH Port
+        es-es: SSH Port
         ja: SSH ポート
         ko: SSH 포트
         ms: SSH Port
         pt-br: SSH Porta
         ru: SSH Порт
+        tr: SSH Port
       required: true
       type: number
       edit: true
@@ -42,6 +46,7 @@ additionalProperties:
         zh: 无根模式
         zh-Hant: 無根模式
         en: Rootless Mode
+        es-es: Rootless Mode
         ja: Rootlessモード
         ko: 루트리스 모드
         ms: Mod Tanpa Keistimewaan
@@ -55,3 +60,20 @@ additionalProperties:
           value: "true"
         - label: "False"
           value: "false"
+    - default: codeberg.org/forgejo/forgejo:14.0.1
+      envKey: IMAGE
+      labelZh: 镜像地址
+      labelEn: Image
+      label:
+        zh: 镜像地址
+        zh-Hant: 映像位址
+        en: Image
+        es-es: Image
+        ja: Image
+        ko: Image
+        ms: Image
+        pt-br: Image
+        ru: Image
+        tr: Image
+      required: true
+      type: text

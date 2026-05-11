@@ -5,6 +5,14 @@ additionalProperties:
       label: 
         zh: 启动加密密钥 (AES Key)
         en: Activation Encryption Key (AES Key)
+        es-es: Activation Encryption Key (AES Key)
+        ja: Activation Encryption Key (AES Key)
+        ms: Activation Encryption Key (AES Key)
+        pt-br: Activation Encryption Key (AES Key)
+        ru: Activation Encryption Key (AES Key)
+        ko: Activation Encryption Key (AES Key)
+        zh-Hant: 啟動加密金鑰 (AES Key)
+        tr: Activation Encryption Key (AES Key)
       required: true
       random: true            # 开启随机生成功能
       rule: "^[A-Za-z0-9]{16,32}$" # 限制为 16-32 位字母数字，确保 100% 兼容
@@ -14,6 +22,14 @@ additionalProperties:
       label: 
         zh: 访问端口 (HTTPS)
         en: Access Port (HTTPS)
+        es-es: Access Port (HTTPS)
+        ja: Access Port (HTTPS)
+        ms: Access Port (HTTPS)
+        pt-br: Access Port (HTTPS)
+        ru: Access Port (HTTPS)
+        ko: Access Port (HTTPS)
+        zh-Hant: 存取連接埠 (HTTPS)
+        tr: Access Port (HTTPS)
       required: true
       rule: paramPort
       type: number

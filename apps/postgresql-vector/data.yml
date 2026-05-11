@@ -10,6 +10,17 @@ additionalProperties:
         - Database
     shortDescZh: 支持向量检索的 PostgreSQL (pg18)
     shortDescEn: PostgreSQL with pgvector support
+    description:
+        en: PostgreSQL package with pgvector support for vector search workloads.
+        es-es: PostgreSQL package with pgvector support for vector search workloads.
+        ja: PostgreSQL package with pgvector support for vector search workloads.
+        ms: PostgreSQL package with pgvector support for vector search workloads.
+        pt-br: PostgreSQL package with pgvector support for vector search workloads.
+        ru: PostgreSQL package with pgvector support for vector search workloads.
+        ko: PostgreSQL package with pgvector support for vector search workloads.
+        zh-Hant: 內建 pgvector、適用於向量檢索工作負載的 PostgreSQL 套件。
+        zh: 内置 pgvector、适用于向量检索工作负载的 PostgreSQL 套件。
+        tr: PostgreSQL package with pgvector support for vector search workloads.
     type: runtime
     crossVersionUpdate: false
     limit: 0

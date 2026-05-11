@@ -9,6 +9,18 @@ additionalProperties:
   tags:
     - Database
   shortDescZh: MongoDB 副本集 (FastGPT 专用)
+  shortDescEn: MongoDB replica set for FastGPT
+  description:
+    en: MongoDB 5.0.32 package with automatic replica set initialization for FastGPT scenarios.
+    es-es: MongoDB 5.0.32 package with automatic replica set initialization for FastGPT scenarios.
+    ja: MongoDB 5.0.32 package with automatic replica set initialization for FastGPT scenarios.
+    ms: MongoDB 5.0.32 package with automatic replica set initialization for FastGPT scenarios.
+    pt-br: MongoDB 5.0.32 package with automatic replica set initialization for FastGPT scenarios.
+    ru: MongoDB 5.0.32 package with automatic replica set initialization for FastGPT scenarios.
+    ko: MongoDB 5.0.32 package with automatic replica set initialization for FastGPT scenarios.
+    zh-Hant: 針對 FastGPT 場景、內建自動初始化副本集邏輯的 MongoDB 5.0.32 套件。
+    zh: 面向 FastGPT 场景、内置自动初始化副本集逻辑的 MongoDB 5.0.32 套件。
+    tr: MongoDB 5.0.32 package with automatic replica set initialization for FastGPT scenarios.
   type: runtime
   crossVersionUpdate: false
   limit: 0

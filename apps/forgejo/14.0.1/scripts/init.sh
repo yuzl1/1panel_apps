@@ -1,4 +1,7 @@
 #!/bin/bash
+# Generated from official installation evidence:
+# - Forgejo image reference: https://codeberg.org/forgejo/-/packages/container/forgejo
+# - Forgejo documentation: https://forgejo.org/docs/latest/admin/installation/docker/
 
 [ -f ./.env ] && source ./.env
 

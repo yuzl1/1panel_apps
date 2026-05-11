@@ -6,6 +6,14 @@ additionalProperties:
       label:
         zh: 服务端口
         en: Port
+        es-es: Port
+        ja: Port
+        ms: Port
+        pt-br: Port
+        ru: Port
+        ko: Port
+        zh-Hant: 服務連接埠
+        tr: Port
       required: true
       rule: paramPort
       type: number

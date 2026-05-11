@@ -6,6 +6,14 @@ additionalProperties:
   description:
     zh: 一键将应用转换为 Docker 镜像的工具。
     en: A tool to convert applications to Docker images.
+    es-es: A tool to convert applications to Docker images.
+    ja: A tool to convert applications to Docker images.
+    ms: A tool to convert applications to Docker images.
+    pt-br: A tool to convert applications to Docker images.
+    ru: A tool to convert applications to Docker images.
+    ko: A tool to convert applications to Docker images.
+    zh-Hant: 一鍵將應用轉換為 Docker 映像的工具。
+    tr: A tool to convert applications to Docker images.
   type: tool
   crossVersionUpdate: true
   limit: 0

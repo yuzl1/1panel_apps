@@ -6,6 +6,14 @@ additionalProperties:
       label:
         en: Web Port
         zh: 访问端口
+        es-es: Web Port
+        ja: Web Port
+        ms: Web Port
+        pt-br: Web Port
+        ru: Web Port
+        ko: Web Port
+        zh-Hant: 存取連接埠
+        tr: Web Port
       required: true
       rule: paramPort
       type: number
@@ -15,6 +23,14 @@ additionalProperties:
       label:
         en: Backend Path
         zh: 后端 API 路径
+        es-es: Backend Path
+        ja: Backend Path
+        ms: Backend Path
+        pt-br: Backend Path
+        ru: Backend Path
+        ko: Backend Path
+        zh-Hant: 後端 API 路徑
+        tr: Backend Path
       required: true
       rule: paramCommon
       type: text

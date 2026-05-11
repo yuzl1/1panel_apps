@@ -6,6 +6,14 @@ additionalProperties:
   description:
     en: Advanced subscription manager for Clash, Stash, and more.
     zh: 高级订阅管理工具，支持节点合并、规则转换及脚本处理。
+    es-es: Advanced subscription manager for Clash, Stash, and more.
+    ja: Advanced subscription manager for Clash, Stash, and more.
+    ms: Advanced subscription manager for Clash, Stash, and more.
+    pt-br: Advanced subscription manager for Clash, Stash, and more.
+    ru: Advanced subscription manager for Clash, Stash, and more.
+    ko: Advanced subscription manager for Clash, Stash, and more.
+    zh-Hant: 高級訂閱管理工具，支援節點合併、規則轉換及腳本處理。
+    tr: Advanced subscription manager for Clash, Stash, and more.
   type: tool
   crossVersionUpdate: true
   limit: 0

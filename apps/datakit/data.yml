@@ -10,7 +10,16 @@ additionalProperties:
   description:
     zh: 基于 Web 的 openGauss 可视化平台，支持一键安装、监控、数据迁移及 SQL 开发。
     en: Web-based openGauss visual platform, supporting one-click installation, monitoring, data migration, and SQL development.
+    es-es: Web-based openGauss visual platform, supporting one-click installation, monitoring, data migration, and SQL development.
+    ja: Web-based openGauss visual platform, supporting one-click installation, monitoring, data migration, and SQL development.
+    ms: Web-based openGauss visual platform, supporting one-click installation, monitoring, data migration, and SQL development.
+    pt-br: Web-based openGauss visual platform, supporting one-click installation, monitoring, data migration, and SQL development.
+    ru: Web-based openGauss visual platform, supporting one-click installation, monitoring, data migration, and SQL development.
+    ko: Web-based openGauss visual platform, supporting one-click installation, monitoring, data migration, and SQL development.
+    zh-Hant: 基於 Web 的 openGauss 視覺化平台，支援一鍵安裝、監控、資料遷移及 SQL 開發。
+    tr: Web-based openGauss visual platform, supporting one-click installation, monitoring, data migration, and SQL development.
   type: tool
   crossVersionUpdate: true
+  limit: 0
   website: https://opengauss.org/
   github: https://github.com/opengauss-mirror/openGauss-datakit
