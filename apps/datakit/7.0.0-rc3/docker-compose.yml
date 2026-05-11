@@ -1,0 +1,20 @@
+services:
+  datakit:
+    image: yu1998/opengauss-datakit:7.0.0-rc3-jdk17
+    container_name: ${CONTAINER_NAME}
+    restart: always
+    environment:
+      - AES_KEY=${AES_KEY}
+    ports:
+      - ${PANEL_APP_PORT_HTTP}:9494
+    volumes:
+      # 现在可以开心地挂载了，不再担心文件丢失
+      - ./data/data:/app/data
+      - ./data/config:/app/config
+      - ./data/logs:/app/logs
+    networks:
+      - 1panel-network
+
+networks:
+  1panel-network:
+    external: true

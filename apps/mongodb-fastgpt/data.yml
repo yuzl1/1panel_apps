@@ -1,0 +1,22 @@
+name: MongoDB-FastGPT
+tags:
+  - 数据库
+title: MongoDB 副本集版
+description: 专门为 FastGPT 优化的 MongoDB 5.0.32 镜像，内置自动初始化副本集逻辑。
+additionalProperties:
+  key: mongodb-fastgpt
+  name: MongoDB-FastGPT
+  tags:
+    - Database
+  shortDescZh: MongoDB 副本集 (FastGPT 专用)
+  type: runtime
+  crossVersionUpdate: false
+  limit: 0
+  recommend: 0
+  website: https://www.mongodb.com/
+  github: https://github.com/mongodb/mongo
+  document: https://www.mongodb.com/docs/
+  memoryRequired: 1024
+  architectures:
+    - amd64
+    - arm64

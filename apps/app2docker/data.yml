@@ -1,0 +1,13 @@
+additionalProperties:
+  key: app2docker
+  name: App2Docker
+  tags:
+    - Tool
+  description:
+    zh: 一键将应用转换为 Docker 镜像的工具。
+    en: A tool to convert applications to Docker images.
+  type: tool
+  crossVersionUpdate: true
+  limit: 0
+  website: https://gitee.com/numen06/app2docker/blob/master/demo.Dockerfile
+  github: https://gitee.com/numen06/app2docker/blob/master/demo.Dockerfile

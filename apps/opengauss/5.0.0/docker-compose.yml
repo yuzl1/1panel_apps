@@ -1,0 +1,37 @@
+version: "3"
+services:
+  opengauss:
+    image: enmotech/opengauss:5.0.0
+    container_name: ${CONTAINER_NAME}
+    restart: always
+    # 1. 开启特权模式，允许 openGauss 调整内核参数和访问 IPC 资源
+    privileged: true
+    networks:
+      - 1panel-network
+    environment:
+      - GS_USER=${GS_USER}
+      - GS_PASSWORD=${GS_PASSWORD}
+      - GS_PORT=5432
+      # 2. 强制禁用 cgroup 逻辑，解决 "Failed to parse cgroup config file" 报错
+      - GS_ENABLE_CGROUP=false
+    # 3. 直接注入内核参数，解决 Socket 创建失败和内存锁定问题
+    sysctls:
+      - kernel.shmmax=18446744073709551615
+      - kernel.sem=250 32000 100 128
+    volumes:
+      - ./data:/var/lib/opengauss
+    ports:
+      - ${PANEL_APP_PORT_DB}:5432
+    healthcheck:
+      # 优化检查命令：初次启动可能需要更久，-p 指定端口
+      test: ["CMD-SHELL", "gsql -d postgres -p 5432 -U ${GS_USER} -W ${GS_PASSWORD} -c 'select 1' || exit 1"]
+      start_period: 120s  # openGauss 启动涉及初始化和日志回滚，建议延长到 120s
+      interval: 30s
+      retries: 5
+      timeout: 10s
+    labels:
+      createdBy: "Apps"
+
+networks:
+  1panel-network:
+    external: true

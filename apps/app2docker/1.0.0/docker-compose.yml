@@ -1,0 +1,19 @@
+version: "3"
+services:
+  app2docker:
+    image: registry.cn-shanghai.aliyuncs.com/51jbm/app2docker:latest
+    container_name: ${CONTAINER_NAME}
+    restart: always
+    networks:
+      - 1panel-network
+    ports:
+      - ${PANEL_APP_PORT_HTTP}:8000
+    volumes:
+      - ./data:/app/data
+      - /var/run/docker.sock:/var/run/docker.sock
+    labels:
+      createdBy: "Apps"
+
+networks:
+  1panel-network:
+    external: true

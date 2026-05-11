@@ -1,0 +1,16 @@
+additionalProperties:
+  key: datakit
+  name: openGauss DataKit
+  tags:
+    - Database
+    - Tool
+  shortDesc:
+    zh: openGauss 一体化可视化运维管理平台
+    en: openGauss integrated visual operation and maintenance management platform
+  description:
+    zh: 基于 Web 的 openGauss 可视化平台，支持一键安装、监控、数据迁移及 SQL 开发。
+    en: Web-based openGauss visual platform, supporting one-click installation, monitoring, data migration, and SQL development.
+  type: tool
+  crossVersionUpdate: true
+  website: https://opengauss.org/
+  github: https://github.com/opengauss-mirror/openGauss-datakit

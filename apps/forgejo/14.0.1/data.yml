@@ -1,0 +1,57 @@
+additionalProperties:
+  formFields:
+    - default: 3000
+      envKey: PANEL_APP_PORT_HTTP
+      labelZh: HTTP 端口
+      labelEn: HTTP Port
+      label:
+        zh: HTTP 端口
+        zh-Hant: HTTP 埠
+        en: HTTP Port
+        ja: HTTP ポート
+        ko: HTTP 포트
+        ms: HTTP Port
+        pt-br: HTTP Porta
+        ru: HTTP Порт
+      required: true
+      type: number
+      edit: true
+      rule: paramPort
+    - default: 222
+      envKey: PANEL_APP_PORT_SSH
+      labelZh: SSH 端口
+      labelEn: SSH Port
+      label:
+        zh: SSH 端口
+        zh-Hant: SSH 埠
+        en: SSH Port
+        ja: SSH ポート
+        ko: SSH 포트
+        ms: SSH Port
+        pt-br: SSH Porta
+        ru: SSH Порт
+      required: true
+      type: number
+      edit: true
+      rule: paramPort
+    - default: "false"
+      envKey: ROOTLESS
+      labelZh: 无根模式
+      labelEn: Rootless Mode
+      label:
+        zh: 无根模式
+        zh-Hant: 無根模式
+        en: Rootless Mode
+        ja: Rootlessモード
+        ko: 루트리스 모드
+        ms: Mod Tanpa Keistimewaan
+        pt-br: Modo Sem Privilégios
+        ru: Беспривилегированный режим
+        tr: Ayrıcalıksız Mod
+      required: false
+      type: select
+      values:
+        - label: "True"
+          value: "true"
+        - label: "False"
+          value: "false"

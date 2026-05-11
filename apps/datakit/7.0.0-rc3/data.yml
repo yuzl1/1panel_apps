@@ -1,0 +1,19 @@
+additionalProperties:
+  formFields:
+    - default: ""             # 默认留空，由 1Panel 生成
+      envKey: AES_KEY
+      label: 
+        zh: 启动加密密钥 (AES Key)
+        en: Activation Encryption Key (AES Key)
+      required: true
+      random: true            # 开启随机生成功能
+      rule: "^[A-Za-z0-9]{16,32}$" # 限制为 16-32 位字母数字，确保 100% 兼容
+      type: password          # 保持加密显示
+    - default: 9494
+      envKey: PANEL_APP_PORT_HTTP
+      label: 
+        zh: 访问端口 (HTTPS)
+        en: Access Port (HTTPS)
+      required: true
+      rule: paramPort
+      type: number

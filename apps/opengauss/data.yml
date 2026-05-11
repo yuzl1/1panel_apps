@@ -1,0 +1,14 @@
+additionalProperties:
+  key: opengauss
+  name: openGauss
+  tags:
+    - Database
+  description:
+    zh: openGauss 是一款开源关系型数据库管理系统。
+    en: openGauss is an open source relational database management system.
+  type: runtime
+  crossVersionUpdate: true
+  limit: 0
+  website: https://opengauss.org/
+  github: https://github.com/opengauss-mirror/openGauss-server
+  document: https://opengauss.org/zh/docs/5.0.0/docs/Overview/Overview.html

@@ -1,0 +1,14 @@
+additionalProperties:
+  key: sub-store
+  name: Sub-Store
+  tags:
+    - Tool
+  description:
+    en: Advanced subscription manager for Clash, Stash, and more.
+    zh: 高级订阅管理工具，支持节点合并、规则转换及脚本处理。
+  type: tool
+  crossVersionUpdate: true
+  limit: 0
+  website: https://github.com/sub-store-org/Sub-Store
+  github: https://github.com/sub-store-org/Sub-Store
+  document: https://github.com/sub-store-org/Sub-Store

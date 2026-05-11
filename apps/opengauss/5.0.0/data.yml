@@ -1,0 +1,27 @@
+additionalProperties:
+  formFields:
+    - default: "gaussdb"
+      envKey: GS_USER
+      label:
+        zh: 数据库管理员用户名
+        en: DB Admin User
+      required: true
+      rule: paramCommon
+      type: text
+    - default: "openGauss@123"
+      envKey: GS_PASSWORD
+      label:
+        zh: 数据库管理员密码
+        en: DB Admin Password
+      required: true
+      rule: paramComplexity
+      type: password
+    - default: 5432
+      edit: true
+      envKey: PANEL_APP_PORT_DB
+      label:
+        zh: 服务端口
+        en: Port
+      required: true
+      rule: paramPort
+      type: number
