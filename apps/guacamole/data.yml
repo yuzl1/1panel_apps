@@ -1,0 +1,35 @@
+name: Guacamole
+tags:
+    - 远程桌面
+    - 办公工具
+title: Apache Guacamole 无客户端远程桌面网关
+description: 通过浏览器访问 RDP、VNC、SSH 的无客户端远程桌面网关
+additionalProperties:
+    key: guacamole
+    name: Guacamole
+    tags:
+        - Remote Desktop
+        - Gateway
+    shortDescZh: 通过浏览器访问 RDP、VNC、SSH 的无客户端远程桌面网关
+    shortDescEn: Clientless remote desktop gateway for RDP, VNC, and SSH
+    type: website
+    crossVersionUpdate: false
+    limit: 0
+    recommend: 0
+    website: https://guacamole.apache.org/
+    github: https://github.com/apache/guacamole-client
+    document: https://guacamole.apache.org/doc/gug/
+    description:
+        en: Clientless remote desktop gateway for RDP, VNC, and SSH
+        es-es: Puerta de enlace de escritorio remoto sin cliente para RDP, VNC y SSH
+        ja: RDP、VNC、SSH 向けのクライアント不要リモートデスクトップゲートウェイ
+        ms: Gerbang desktop jauh tanpa klien untuk RDP, VNC, dan SSH
+        pt-br: Gateway de desktop remoto sem cliente para RDP, VNC e SSH
+        ru: Бесклиентский шлюз удаленного рабочего стола для RDP, VNC и SSH
+        ko: RDP, VNC, SSH용 클라이언트 없는 원격 데스크톱 게이트웨이
+        zh-Hant: 透過瀏覽器存取 RDP、VNC、SSH 的免客戶端遠端桌面閘道
+        zh: 通过浏览器访问 RDP、VNC、SSH 的无客户端远程桌面网关
+        tr: RDP, VNC ve SSH icin istemcisiz uzak masaustu gecidi
+    architectures:
+        - amd64
+        - arm64

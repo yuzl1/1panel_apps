@@ -1,0 +1,70 @@
+services:
+  guacamole-init:
+    image: mysql:8.4.9
+    container_name: ${CONTAINER_NAME}-dbinit
+    restart: "no"
+    networks:
+      - 1panel-network
+    environment:
+      MYSQL_PWD: ${PANEL_DB_ROOT_PASSWORD}
+    entrypoint:
+      - /bin/sh
+      - -c
+    command: |
+      set -eu
+      until mysqladmin ping -h"${PANEL_DB_HOST}" -P"${PANEL_DB_PORT}" -uroot --silent; do
+        sleep 3
+      done
+      mysql -h"${PANEL_DB_HOST}" -P"${PANEL_DB_PORT}" -uroot <<EOSQL
+      CREATE DATABASE IF NOT EXISTS \`${PANEL_DB_NAME}\` CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
+      CREATE USER IF NOT EXISTS '${PANEL_DB_USER}'@'%' IDENTIFIED BY '${PANEL_DB_USER_PASSWORD}';
+      ALTER USER '${PANEL_DB_USER}'@'%' IDENTIFIED BY '${PANEL_DB_USER_PASSWORD}';
+      GRANT ALL PRIVILEGES ON \`${PANEL_DB_NAME}\`.* TO '${PANEL_DB_USER}'@'%';
+      FLUSH PRIVILEGES;
+      EOSQL
+      if mysql -h"${PANEL_DB_HOST}" -P"${PANEL_DB_PORT}" -uroot -D"${PANEL_DB_NAME}" -Nse "SHOW TABLES LIKE 'guacamole_user';" | grep -q guacamole_user; then
+        echo "Guacamole schema already exists, skipping import."
+        exit 0
+      fi
+      mysql -h"${PANEL_DB_HOST}" -P"${PANEL_DB_PORT}" -uroot "${PANEL_DB_NAME}" < /docker-entrypoint-initdb.d/initdb.sql
+    volumes:
+      - ./scripts/initdb.sql:/docker-entrypoint-initdb.d/initdb.sql:ro
+    labels:
+      createdBy: "Apps"
+
+  guacd:
+    image: guacamole/guacd:1.6.0
+    container_name: ${CONTAINER_NAME}-guacd
+    restart: always
+    networks:
+      - 1panel-network
+    labels:
+      createdBy: "Apps"
+
+  guacamole:
+    image: guacamole/guacamole:1.6.0
+    container_name: ${CONTAINER_NAME}
+    restart: always
+    depends_on:
+      guacamole-init:
+        condition: service_completed_successfully
+      guacd:
+        condition: service_started
+    networks:
+      - 1panel-network
+    ports:
+      - ${PANEL_APP_PORT_HTTP}:8080
+    environment:
+      GUACD_HOSTNAME: guacd
+      MYSQL_HOSTNAME: ${PANEL_DB_HOST}
+      MYSQL_PORT: ${PANEL_DB_PORT}
+      MYSQL_DATABASE: ${PANEL_DB_NAME}
+      MYSQL_USERNAME: ${PANEL_DB_USER}
+      MYSQL_PASSWORD: ${PANEL_DB_USER_PASSWORD}
+      WEBAPP_CONTEXT: ROOT
+    labels:
+      createdBy: "Apps"
+
+networks:
+  1panel-network:
+    external: true

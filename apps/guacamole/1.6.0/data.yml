@@ -1,0 +1,120 @@
+additionalProperties:
+  formFields:
+    - default: mysql
+      envKey: PANEL_DB_TYPE
+      labelEn: Database Service
+      labelZh: 数据库服务
+      label:
+        en: Database Service
+        es-es: Servicio de base de datos
+        ja: データベースサービス
+        ms: Perkhidmatan pangkalan data
+        pt-br: Servico de banco de dados
+        ru: Сервис базы данных
+        ko: 데이터베이스 서비스
+        zh-Hant: 資料庫服務
+        zh: 数据库服务
+        tr: Veritabani hizmeti
+      required: true
+      type: apps
+      child:
+        default: ""
+        envKey: PANEL_DB_HOST
+        required: true
+        type: service
+      values:
+        - label: MySQL
+          value: mysql
+        - label: MariaDB
+          value: mariadb
+    - default: ""
+      envKey: PANEL_DB_ROOT_PASSWORD
+      labelEn: Root Password
+      labelZh: 数据库 Root 密码
+      label:
+        en: Root Password
+        es-es: Contrasena de root
+        ja: Rootパスワード
+        ms: Kata laluan root
+        pt-br: Senha root
+        ru: Пароль root
+        ko: 루트 비밀번호
+        zh-Hant: Root 密碼
+        zh: 数据库 Root 密码
+        tr: Root sifresi
+      required: true
+      type: password
+    - default: guacamole
+      envKey: PANEL_DB_NAME
+      labelEn: Database Name
+      labelZh: 数据库名称
+      label:
+        en: Database Name
+        es-es: Nombre de la base de datos
+        ja: データベース名
+        ms: Nama pangkalan data
+        pt-br: Nome do banco de dados
+        ru: Имя базы данных
+        ko: 데이터베이스 이름
+        zh-Hant: 資料庫名稱
+        zh: 数据库名称
+        tr: Veritabani adi
+      random: true
+      required: true
+      rule: paramCommon
+      type: text
+    - default: guacamole
+      envKey: PANEL_DB_USER
+      labelEn: Database User
+      labelZh: 数据库用户
+      label:
+        en: Database User
+        es-es: Usuario de la base de datos
+        ja: データベースユーザー
+        ms: Pengguna pangkalan data
+        pt-br: Usuario do banco de dados
+        ru: Пользователь базы данных
+        ko: 데이터베이스 사용자
+        zh-Hant: 資料庫使用者
+        zh: 数据库用户
+        tr: Veritabani kullanicisi
+      random: true
+      required: true
+      rule: paramCommon
+      type: text
+    - default: guacamole
+      envKey: PANEL_DB_USER_PASSWORD
+      labelEn: Database Password
+      labelZh: 数据库密码
+      label:
+        en: Database Password
+        es-es: Contrasena de la base de datos
+        ja: データベースパスワード
+        ms: Kata laluan pangkalan data
+        pt-br: Senha do banco de dados
+        ru: Пароль базы данных
+        ko: 데이터베이스 비밀번호
+        zh-Hant: 資料庫密碼
+        zh: 数据库密码
+        tr: Veritabani sifresi
+      random: true
+      required: true
+      type: password
+    - default: 8080
+      envKey: PANEL_APP_PORT_HTTP
+      labelEn: HTTP Port
+      labelZh: HTTP 端口
+      label:
+        en: HTTP Port
+        es-es: Puerto HTTP
+        ja: HTTPポート
+        ms: Port HTTP
+        pt-br: Porta HTTP
+        ru: HTTP-порт
+        ko: HTTP 포트
+        zh-Hant: HTTP 連接埠
+        zh: HTTP 端口
+        tr: HTTP portu
+      required: true
+      rule: paramPort
+      type: number
