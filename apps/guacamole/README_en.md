@@ -7,8 +7,8 @@
 This directory has been converted to a **1Panel local app** layout:
 
 - Uses official `guacamole/guacd` images
-- Uses a **MySQL/MariaDB service managed by 1Panel**
-- Initializes the database automatically during install with a one-shot setup container
+- Reuses an existing **MySQL/MariaDB service managed by 1Panel**
+- Initializes the database automatically during install by running commands inside the existing database container
 
 ## Default Login
 

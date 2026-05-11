@@ -7,8 +7,8 @@
 这个目录已经整理为 **1Panel 自建应用** 结构，适合直接导入本地应用仓库使用：
 
 - 使用 `guacamole/guacd` 官方镜像
-- 数据库改为依赖 **1Panel 中已安装的 MySQL/MariaDB**
-- 安装时会通过一次性初始化容器自动创建数据库、用户并导入 Guacamole schema
+- 数据库复用 **1Panel 中已安装的 MySQL/MariaDB**
+- 安装时通过宿主机脚本直接进入现有数据库容器，自动创建数据库、用户并导入 Guacamole schema
 
 ## 默认访问信息
 
